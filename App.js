@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Client } from 'react-native-appwrite';
 
 export default function App() {
-  const PROJECT_ID = '669556a700375f158b9c';  //an appwrite project need to be create at cloud.appwrite.io/console
+  const PROJECT_ID = 'project_id';  //an appwrite project need to be create at cloud.appwrite.io/console
   const ENDPOINT = 'https://cloud.appwrite.io/v1';// Set universal endpoint
 
   useEffect(() => {
