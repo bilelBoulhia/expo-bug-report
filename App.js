@@ -1,10 +1,33 @@
 import { StatusBar } from 'expo-status-bar';
+import { useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Client } from 'react-native-appwrite';
 
 export default function App() {
+  const PROJECT_ID = '669556a700375f158b9c';  //an appwrite project need to be create at cloud.appwrite.io/console
+  const ENDPOINT = 'https://cloud.appwrite.io/v1';// Set universal endpoint
+
+  useEffect(() => {
+
+    const client = new Client();
+    client.setEndpoint(ENDPOINT); 
+    client.setProject(PROJECT_ID); 
+
+
+
+
+
+    const unsubscribe = client.subscribe('files', response => {
+      console.log(response);
+    });
+
+   
+    return () => unsubscribe();
+  }, []);
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Check console for output</Text>
       <StatusBar style="auto" />
     </View>
   );
