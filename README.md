@@ -9,7 +9,7 @@ manaul setup
 
 2.add the following dependencies 
 
-npx expo install react-native-web react-dom @expo/metro-runtime
+npx expo install react-native-web react-dom @expo/metro-runtime react-native-appwrite
 
 npm i react-native-appwrite
 
