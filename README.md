@@ -1,4 +1,5 @@
 ﻿# expo-bug-report
+clone this repo and run yarn install or 
 
 manaul setup
 
